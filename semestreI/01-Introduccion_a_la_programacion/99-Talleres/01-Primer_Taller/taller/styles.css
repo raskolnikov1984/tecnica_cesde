@@ -1,3 +1,10 @@
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    color: rgb(255, 7, 193);
+}
+
 table {
     border-collapse: collapse;
     margin: 25px auto
@@ -7,7 +14,7 @@ caption {
     font-size: 15px;
     background-color: rgb(255, 7, 193);
     color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 15px;
     font-weight: bold;
 }
 
@@ -20,4 +27,18 @@ thead {
 th, td {
     padding: 10px;
     border: 1px solid black;
+    text-align: center;
+}
+
+nav {
+    background-color: rgb(255, 7, 193);
+    padding: 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: rgb(255, 7, 193);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10px;
 }
