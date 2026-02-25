@@ -8,7 +8,8 @@ public class Main {
 
         final int valorTaxis = 30000;
         final int valorBuses = 80000;
-        final int valorParticulares = 40000;
+        final int valorParticulares;
+        valorParticulares = 40000;
         final int valorMotos = 15000;
 
         int totalDia = 0;
@@ -42,9 +43,5 @@ public class Main {
         }
 
         System.out.print("El valor recolectado en el Dia es: " + totalDia);
-
-
-
-
     }
 }
