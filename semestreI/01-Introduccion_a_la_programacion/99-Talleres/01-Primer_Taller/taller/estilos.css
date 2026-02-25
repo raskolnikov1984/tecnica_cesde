@@ -1,0 +1,22 @@
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 14px;
+    color: #4682b4;
+}
+
+thead {
+    font-size: 14px;
+    background-color: #1e90ff;
+    font-weight: bold;
+    color: #fff;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 15px;
+}
