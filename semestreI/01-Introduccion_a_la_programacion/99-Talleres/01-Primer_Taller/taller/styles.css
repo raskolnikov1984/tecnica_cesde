@@ -42,6 +42,18 @@ nav {
     text-align: center;
 }
 
+fieldset div {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px; /* Espacio entre el texto y el check */
+    margin-bottom: 5px;
+}
+
+fieldset {
+    width: fit-content; /* Para que el cuadro no ocupe todo el ancho de la pantalla */
+    border: 1px solid #ccc;
+}
+
 footer {
     background-color: rgb(255, 7, 193);
     color: rgb(0, 0, 0);
