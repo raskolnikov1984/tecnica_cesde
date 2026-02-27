@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Contactos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+        <a href="index.html">Index</a>
+        <a href="tablas.html">Tablas</a>
+        <a href="listas.html">Listas</a>
+        <a href="formulario.html">Formulario</a>
+    </nav>
+
+    <h1>Formulario de Contactos</h1>
+    <div>
+      <div action="#" method="post">
+        <div>
+            <label for="full_name">Nombre completo</label>
+            <input type="text" id="full_name" name="full_name" />
+        </div>
+
+        <div>
+            <label for="phone_mobile">Numero movil</label>
+            <input type="tel" id="phone_mobile" name="phone_mobile" />
+        </div>
+
+        <div>
+            <label for="birth_date">Fecha de nacimiento</label>
+            <input type="date" id="birth_date" name="birth_date" value="1950-01-01"/>
+        </div>
+
+        <div>
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" />
+        </div>
+
+        <div>
+            <label for="favorite_color">Color favorito</label>
+            <input
+            type="color"
+            id="favorite_color"
+            name="favorite_color"
+            value="#FF0000"/>
+        </div>
+        
+        <div>
+            <label for="weight_kg">Peso en (kg)</label>
+            <input type="number" id="weight_kg" name="weight_kg" value="30"/>
+        </div>
+
+        <div>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" />
+        </div>
+
+        <br/>
+
+        <fieldset>
+          <legend>Estado Civil:</legend>
+          <div>
+            <label for="lsingle">Soltero</label>
+            <input type="radio" id="lsingle" name="civil_status" value="single" />
+          </div>
+
+          <div>
+          <label for="lmarried">Casado</label>
+          <input
+            type="radio"
+            id="lmarried"
+            name="civil_status"
+            value="married"
+          />
+          </div>
+
+          <div>
+          <label for="ldivorced">Divorciado</label>
+          <input
+            type="radio"
+            id="ldivorced"
+            name="civil_status"
+            value="divorced"
+          />  
+          </div>
+
+          <div>
+            <label for="lwidowed">Viudo</label>
+            <input
+                type="radio"
+                id="lwidowed"
+                name="civil_status"
+                value="widowed"/>
+            </div>
+        </fieldset>
+
+        <br/>
+
+        <fieldset>
+          <legend>Desea informacion de:</legend>
+
+          <div>
+            <label for="sports">Deportes</label>
+            <input type="checkbox" id="sports" name="interests" value="sports" />
+          </div>
+          <div>
+            <label for="languages">Idiomas</label>
+            <input
+                type="checkbox"
+                id="languages"
+                name="interests"
+                value="languages"/>
+          </div>
+
+          <div>
+            <label for="politic">Politica</label>
+            <input
+                type="checkbox"
+                id="politic"
+                name="interests"
+                value="politic"/>
+          </div>
+
+          <div>
+            <label for="technology">Tecnologia</label>
+            <input
+                type="checkbox"
+                id="technology"
+                name="interests"
+                value="technology"/>
+          </div>
+          
+        </fieldset>
+
+        <fieldset>
+          <legend>Seleccione su pais:</legend>
+          <select name="country" id="country">
+            <option value="caldas">Caldas</option>
+            <option value="itagui">Itagui</option>
+            <option value="bello">Bello</option>
+            <option value="medellin">Medellin</option>
+          </select>
+        </fieldset>
+
+        <div>
+            <div>
+                <label for="comments">Comentarios:</label>
+            </div>
+            <div>
+                <textarea
+                id="comments"
+                name="comments"
+                rows="4"
+                cols="50"
+                spellcheck="false"
+                placeholder="Escribe aqui tu comentario..."></textarea>
+            </div>
+        </div>
+
+        <br/>
+
+        <div>
+            <button type="submit">Enviar formulario</button>
+            <button type="reset">Reiniciar</button>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+            <p>
+                &copy; 2026 Taller 1 - Introducción a la programación<br />
+                <strong>creado por:</strong> Alejandro Ayala Usuga<br />
+                <strong>email:</strong> alayala@cesde.net<br />
+                <strong>teléfono:</strong> 301 685 9278
+            </p>
+    </footer>
+  </body>
+</html>
