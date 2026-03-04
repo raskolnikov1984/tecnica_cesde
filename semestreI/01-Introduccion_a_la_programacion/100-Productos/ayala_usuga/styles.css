@@ -1,0 +1,30 @@
+
+table {
+  border-collapse: collapse;
+  width: 350px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 2px solid blue;
+}
+
+th {
+  background-color: #a6b0b5;
+  border: 1px solid blue;
+  padding: 10px;
+}
+
+td {
+  border: 1px solid blue;
+  padding: 8px;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+fieldset {
+  width: fit-content;
+  border: 1px solid #ccc;
+}
