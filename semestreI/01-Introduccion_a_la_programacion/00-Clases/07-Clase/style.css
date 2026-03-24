@@ -1,0 +1,30 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: cadetblue;
+    font-family: 'Courier New';
+    font-size: 22px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+header, footer {
+    background-color: aliceblue;
+}
+
+nav {
+    background-color: violet;
+}
+nav a{
+    background-color: violet;
+    color: #fff;
+    padding: 10px 15px;
+    margin-right: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
