@@ -90,6 +90,7 @@ p {
 .fondo .elementos {
     background-image: url(images/universidades.png);
     background-size: 100%;
+    background-repeat: no-repeat;
     width: 100%;
     padding-top: 58%;
     position: relative;
@@ -99,7 +100,6 @@ p {
     width: 35%;
     height: 15%;
     border-radius: 15px;
-    border: 1px solid red;
     position: absolute;
 }
 
@@ -142,4 +142,13 @@ p {
 .fondo .elementos .selecion.siete {
     top: 340px;
     left: 480px;
+}
+
+.aplauso {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
