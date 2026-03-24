@@ -1,0 +1,26 @@
+#+title: 1 Clase Feb 27
+
+- DDL: Data Definition Language.
+  - CREATE.
+  - ALTER.
+  - DROP.
+  - TRUNCATE.
+
+- DML: Data Manipulation Language.
+  - INSERT.
+  - UPDATE.
+  - DELETE.
+  - SELECT.
+
+- DCL: Data Control Language.
+  - GRANT.
+  - REVOKE.
+
+- DQL: Data Query Language.
+
+* Operaciones
+
+1. Insertar.
+2. Eliminar.
+3. Actualizar.
+4. Consultar.
