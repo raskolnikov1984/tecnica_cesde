@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(font/Roboto-Medium.ttf);
+}
+
+html {
+    font-family: 'Roboto';
+    background-image: url(images/fondo2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pixel {
+
+}
+
+.rem {
+
+}
+
+.em {
+
+}
