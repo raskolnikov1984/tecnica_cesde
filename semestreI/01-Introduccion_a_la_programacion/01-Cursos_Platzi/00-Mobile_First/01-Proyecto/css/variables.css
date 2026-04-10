@@ -1,0 +1,38 @@
+:root {
+  /* Primary */
+  --primary-black: #000000;
+  --primary-neutral: #404040;
+  --primary-white: #ffffff;
+
+  /* Zinc */
+  --zinc-100: #f4f4f5;
+  --zinc-200: #e4e4e7;
+  --zinc-300: #d4d4d8;
+  --zinc-500: #71717a;
+  --zinc-800: #27272a;
+
+  /* Error */
+  --error-500: #ef4444;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-36: 36px;
+  --spacing-40: 40px;
+
+  --outline-width: 2px;
+
+  --max-width: 1280px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --outline-width: 2px;
+  }
+}

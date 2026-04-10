@@ -1,37 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .test {
-            width: 100px;
-            height: 100px;
-            background-color: red;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flora Sheen Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" class="css" />
+    <link rel="stylesheet" href="css/variables.css" class="css" />
+    <link rel="stylesheet" href="css/global.css" class="css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__brand">
+        <img
+          src="assets/logo.svg"
+          alt="Flora Sheen Portfoloio"
+          class="header__logo"
+        />
+        <span class="header__title">Personal</span>
+      </div>
 
-        @media (min-width: 768px){
-            .test {
-                background-color: blue;
-            }
+      <button aria-label="Toggle Menu" class="header__toggle">
+        <img src="assets/toggle.svg" alt="Hamburger Menu" />
+      </button>
 
-        }
+      <nav class="header__nav">
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
+      </nav>
 
-        @media (min-width: 1024px){
-            .test {
-                background-color: yellow;
-            }
-        }
+      <button class="header__cta" aria-label="Download Resume">Resume</button>
+    </header>
 
-        @media (min-width: 1024px){
-            .test {
-                background-color: purple;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="test"></div>
-</body>
+    <main>
+      <section class="hero">
+        <img
+          src="assets/hero.svg"
+          alt="Girl working on a laptop"
+          class="hero__image"
+        />
+
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Hello, I'm <strong>Flora Sheen</strong>.<br />Frontend
+            <span class="outlined">Developer</span><br />Developer Based In
+            <strong>India</strong>.
+          </h1>
+          <p class="hero__description">
+            I am a frontend developer with a passion for creating beautiful and
+            functional websites. I have a strong background in HTML, CSS, and
+            JavaScript, and I am always looking to learn new technologies and
+            improve my skills.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
