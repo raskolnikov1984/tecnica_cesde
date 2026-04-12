@@ -2,6 +2,9 @@ body {
     font-family: "Sora", sans-serif;
 }
 
+.section {
+    max-width: var(--max-width);
+}
 .outlined {
     font-weight: 800;
     color: var(--primary-white);
@@ -70,7 +73,7 @@ body {
     font-weight: 600;
 }
 
-@media (min-width: 1022px) {
+@media (min-width: 1024px) {
     .header__nav,
     .header__cta {
         display: block;
@@ -114,7 +117,7 @@ body {
     text-align: center;
 }
 
-.section-container {
+.section--container {
     padding: var(--spacing-40) var(--spacing-16);
     max-width: var(--max-width);
     margin: 0 auto;
@@ -200,8 +203,176 @@ body {
     height: 24px;
 }
 
+@media (min-width: 1024px) {
+    .hero .section--container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: var(--spacing-60);
+        align-items: center;
+    }
+
+    .hero__content {
+        /* Aseguramos que el contenido de texto sea el primer elemento del grid */
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .hero__image {
+        /* Aseguramos que la imagen sea el segundo elemento del grid */
+        grid-column: 2;
+        grid-row: 1;
+        max-height: 60vh; /* Ajuste opcional para que luzca mejor */
+        width: 100%;
+    }
+
+    .hero__title {
+        font-size: clamp(2.5rem, 4vw, 4rem);
+    }
+
+    .hero__description {
+        font-size: 20px;
+    }
+
+    .hero__social {
+        justify-content: flex-start;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--spacing-20);
+}
+
+.skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    aspect-ratio: 1/1;
+
+    padding: var(--spacing-24);
+    border-radius: 4px;
+
+    background: var(--primary-white);
+    border: 2px solid var(--primary-black);
+
+    transition: transform 0.15s ease;
+}
+
+.skill-card:hover {
+    background: var(--primary-black);
+    color: var(--primary-white);
+    transform: translateY(-2px);
+}
+
+.skill-card:hover .skill-card__icon img {
+    filter: invert(1);
+}
+
+.skill-card:hover .skill-card__label {
+    color: var(--primary-white);
+}
+
+.skill-card__icon img {
+    width: clamp(3rem, 4vw, 5rem);
+    height: auto;
+    margin-bottom: var(--spacing-16);
+}
+
+.skill-card__label {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    color: var(--primary-black);
+}
+
+/* Grid auto-fit */
+.skills__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--spacing-20);
+}
+
+.skill-card:nth-child(n + 7) {
+    display: none;
+}
+
 @media (min-width: 768px) {
-    .hero {
-        flex-direction: row-reverse;
+    .skills__grid {
+        gap: var(--spacing-32);
+    }
+    .skill-card:nth-child(n + 7) {
+        display: flex;
+    }
+
+    .skill-card:nth-child(n + 9) {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills__grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .skill-card:nth-child(n + 9) {
+        display: flex;
+    }
+}
+
+/* --- EXPERIENCE SECTION --- */
+
+.experience {
+    background-color: var(--primary-black);
+    color: var(--primary-white);
+}
+
+.experience-card {
+    padding: var(--spacing-32) var(--spacing-24);
+    border: 1px solid var(--zinc-500);
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: var(--spacing-32);
+    grid-template-areas: "logo role" "date date" "description description";
+    align-items: center;
+}
+
+.experience-card:hover {
+    background-color: var(--zinc-800);
+}
+
+.experience-card__logo {
+    grid-area: logo;
+    width: 100%;
+}
+
+.experience-card__role {
+    grid-area: role;
+    font-size: 1.25rem;
+    font-weight: 600;
+    align-self: end;
+}
+.experience-card__date {
+    color: var(--zinc-300);
+    font-size: 1rem;
+    font-weight: 600;
+    grid-area: date;
+}
+.experience-card__description {
+    grid-area: description;
+    line-height: 1.5;
+    color: var(--zinc-300);
+}
+
+@media (min-width: 768px) {
+    .experience-card {
+        grid-template-columns: 32px 1fr auto;
+        grid-template-areas: "logo role date" "description description description";
     }
 }
