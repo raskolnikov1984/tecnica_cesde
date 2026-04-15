@@ -68,8 +68,12 @@ footer {
         flex-direction: column;
     }
 
-    .contenido .izquierda,
+    .contenido .izquierda {
+        width: 100%;
+    }
+
     .contenido .derecha {
         width: 100%;
+        min-height: 25vh;
     }
 }
