@@ -1,35 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="100%" height="auto" style="max-width:500px;">
-  <rect width="500" height="380" fill="#1a1a3e" rx="10"/>
+  <rect width="500" height="380" fill="#080808" rx="10"/>
 
   <rect x="60" y="30" width="380" height="45" fill="#00d4ff" rx="5"/>
-  <text x="250" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#0a0a23">users</text>
+  <text x="250" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="18" fill="#000000">users</text>
 
-  <rect x="60" y="75" width="380" height="38" fill="#16213e" stroke="#2a2a4e" stroke-width="1"/>
+  <rect x="60" y="75" width="380" height="38" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
   <text x="80" y="100" font-family="monospace" font-size="12" fill="#e94560" font-weight="bold">PK</text>
   <text x="115" y="100" font-family="monospace" font-size="14" fill="#00d4ff" font-weight="bold">id</text>
   <text x="410" y="100" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">INT</text>
 
-  <rect x="60" y="113" width="380" height="38" fill="#1a1a3e" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="80" y="138" font-family="monospace" font-size="12" fill="#5c6370"></text>
-  <text x="115" y="138" font-family="monospace" font-size="14" fill="#e0e0e0">name</text>
+  <rect x="60" y="113" width="380" height="38" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="115" y="138" font-family="monospace" font-size="14" fill="#e8e8e8">name</text>
   <text x="410" y="138" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">VARCHAR(100)</text>
 
-  <rect x="60" y="151" width="380" height="38" fill="#16213e" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="115" y="176" font-family="monospace" font-size="14" fill="#e0e0e0">email</text>
+  <rect x="60" y="151" width="380" height="38" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="115" y="176" font-family="monospace" font-size="14" fill="#e8e8e8">email</text>
   <text x="410" y="176" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">VARCHAR(150)</text>
 
-  <rect x="60" y="189" width="380" height="38" fill="#1a1a3e" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="115" y="214" font-family="monospace" font-size="14" fill="#e0e0e0">phone</text>
+  <rect x="60" y="189" width="380" height="38" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="115" y="214" font-family="monospace" font-size="14" fill="#e8e8e8">phone</text>
   <text x="410" y="214" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">VARCHAR(20)</text>
 
-  <rect x="60" y="227" width="380" height="38" fill="#16213e" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="115" y="252" font-family="monospace" font-size="14" fill="#e0e0e0">address</text>
+  <rect x="60" y="227" width="380" height="38" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="115" y="252" font-family="monospace" font-size="14" fill="#e8e8e8">address</text>
   <text x="410" y="252" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">TEXT</text>
 
-  <rect x="60" y="265" width="380" height="38" fill="#1a1a3e" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="115" y="290" font-family="monospace" font-size="14" fill="#e0e0e0">created_at</text>
+  <rect x="60" y="265" width="380" height="38" fill="#000000" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="115" y="290" font-family="monospace" font-size="14" fill="#e8e8e8">created_at</text>
   <text x="410" y="290" text-anchor="end" font-family="monospace" font-size="12" fill="#98c379">DATE</text>
 
-  <line x1="60" y1="75" x2="60" y2="303" stroke="#2a2a4e" stroke-width="1"/>
-  <text x="75" y="310" text-anchor="middle" font-family="Arial" font-size="10" fill="#5c6370">PK</text>
+  <line x1="60" y1="75" x2="60" y2="303" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="75" y="310" text-anchor="middle" font-family="Arial" font-size="10" fill="#6a6a6a">PK</text>
 </svg>
