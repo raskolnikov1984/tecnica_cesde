@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD | Alejandro Ayala - User Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.svg" alt="Alejandro Ayala Logo" height="40" />
+          Alejandro Ayala
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="crud.html">CRUD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="database.html">Database</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logic.html">Logic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>User Management</h1>
+          <p class="lead">Create, Read, Update, Delete operations</p>
+          <p>
+            Full CRUD implementation for user management with persistent local
+            storage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title mb-4" id="formTitle">New User</h4>
+                <form id="userForm" onsubmit="handleCreateUser(event)">
+                  <input type="hidden" id="userId" value="" />
+                  <div class="mb-3">
+                    <label for="userName" class="form-label">Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userName"
+                      placeholder="Enter full name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="userEmail" class="form-label">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="userEmail"
+                      placeholder="Enter email address"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="userPhone" class="form-label">Phone *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="userPhone"
+                      placeholder="Enter phone number"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="userAddress" class="form-label">Address</label>
+                    <textarea
+                      class="form-control"
+                      id="userAddress"
+                      placeholder="Enter address"
+                      rows="2"
+                    ></textarea>
+                  </div>
+                  <div class="d-grid gap-2">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      id="submitBtn"
+                    >
+                      Create User
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary"
+                      onclick="resetForm()"
+                    >
+                      Clear Form
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title mb-4">Users List</h4>
+                <div class="table-responsive">
+                  <table class="table table-dark table-striped">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody id="users-table-body">
+                      <tr>
+                        <td colspan="7" class="text-center text-secondary py-4">
+                          Loading...
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="text-secondary mt-3 mb-0" style="font-size: 0.85rem">
+                  <i class="bi bi-info-circle me-1"></i>
+                  Data is stored locally in your browser (localStorage). No data
+                  is sent to any server.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Alejandro Ayala</h5>
+            <p>Sr. Software Developer Python</p>
+            <p>
+              Building robust, scalable software solutions with modern
+              technologies.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="crud.html">CRUD</a></li>
+              <li><a href="database.html">Database</a></li>
+              <li><a href="logic.html">Logic</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="team.html">Team</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact</h5>
+            <p><i class="bi bi-envelope me-2"></i>alejandro.ayala0@gmail.com</p>
+            <p><i class="bi bi-telephone me-2"></i>+57 (301) 685-9278</p>
+            <p><i class="bi bi-geo-alt me-2"></i>Medellin, Colombia</p>
+            <div class="social-links">
+              <a
+                href="https://linkedin.com/in/alejandro-ayala-usuga-26807b219"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn profile"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub profile"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="social-link"
+                aria-label="Portfolio website"
+                ><i class="bi bi-briefcase"></i
+              ></a>
+              <a
+                href="mailto:alejandro.ayala0@gmail.com"
+                class="social-link"
+                aria-label="Send email"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Alejandro Ayala. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
