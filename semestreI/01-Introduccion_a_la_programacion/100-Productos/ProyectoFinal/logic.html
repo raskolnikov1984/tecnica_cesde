@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logic | Alejandro Ayala - Fibonacci Sequence</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.svg" alt="Alejandro Ayala Logo" height="40" />
+          Alejandro Ayala
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="crud.html">CRUD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="database.html">Database</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logic.html">Logic</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Fibonacci Sequence</h1>
+          <p class="lead">Programming logic exercise</p>
+          <p>
+            Generate the Fibonacci sequence up to n terms and explore the
+            classic recursive algorithm.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body text-center">
+                <h3 class="card-title mb-4">Fibonacci Generator</h3>
+                <p class="card-text">
+                  Enter a non-negative integer (n) to generate the Fibonacci
+                  sequence up to F(n).
+                </p>
+
+                <div class="row justify-content-center mb-4">
+                  <div class="col-md-6">
+                    <div class="input-group">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="fibInput"
+                        placeholder="Enter n (0 - 50)"
+                        min="0"
+                        max="50"
+                        value="10"
+                      />
+                      <button
+                        class="btn btn-primary"
+                        onclick="generateFibonacci()"
+                      >
+                        Generate
+                      </button>
+                    </div>
+                    <div
+                      id="fibError"
+                      class="alert alert-danger mt-2"
+                      style="display: none; font-size: 0.9rem"
+                    ></div>
+                  </div>
+                </div>
+
+                <div id="fibResult" class="fibonacci-sequence mb-4"></div>
+
+                <p class="text-secondary" style="font-size: 0.85rem">
+                  <i class="bi bi-info-circle me-1"></i>
+                  F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section" style="padding-top: 0">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Understanding the Fibonacci algorithm</p>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-lightbulb text-accent me-2"></i>Mathematical
+                  Definition
+                </h5>
+                <p class="card-text">
+                  The Fibonacci sequence is defined by the recurrence relation:
+                </p>
+                <div class="code-block">
+                  <pre>F(0) = <span class="number">0</span>
+F(1) = <span class="number">1</span>
+F(n) = F(n-<span class="number">1</span>) + F(n-<span class="number">2</span>)  <span class="comment">// for n > 1</span></pre>
+                </div>
+                <p class="card-text">
+                  Each number is the sum of the two preceding ones, starting
+                  from 0 and 1.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-code-slash text-accent me-2"></i>JavaScript
+                  Implementation
+                </h5>
+                <div class="code-block">
+                  <pre><span class="keyword">function</span> <span class="function">fibonacci</span>(n) {
+    <span class="keyword">let</span> sequence = [];
+    <span class="keyword">let</span> a = <span class="number">0</span>, b = <span class="number">1</span>;
+
+    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i <= n; i++) {
+        sequence.<span class="function">push</span>(a);
+        [a, b] = [b, a + b];
+    }
+
+    <span class="keyword">return</span> sequence;
+}</pre>
+                </div>
+                <p class="card-text">
+                  This iterative approach runs in <strong>O(n)</strong> time and
+                  uses <strong>O(n)</strong> space.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-graph-up-arrow text-accent me-2"></i>Example:
+                  First 10 Terms
+                </h5>
+                <div class="code-block">
+                  <pre>F(<span class="number">0</span>)  =    <span class="number">0</span>
+F(<span class="number">1</span>)  =    <span class="number">1</span>
+F(<span class="number">2</span>)  =    <span class="number">1</span>
+F(<span class="number">3</span>)  =    <span class="number">2</span>
+F(<span class="number">4</span>)  =    <span class="number">3</span>
+F(<span class="number">5</span>)  =    <span class="number">5</span>
+F(<span class="number">6</span>)  =    <span class="number">8</span>
+F(<span class="number">7</span>)  =   <span class="number">13</span>
+F(<span class="number">8</span>)  =   <span class="number">21</span>
+F(<span class="number">9</span>)  =   <span class="number">34</span>
+F(<span class="number">10</span>) =   <span class="number">55</span></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <i class="bi bi-compass text-accent me-2"></i>Applications
+                </h5>
+                <p class="card-text">
+                  The Fibonacci sequence appears in many areas:
+                </p>
+                <ul class="card-text">
+                  <li>
+                    <strong>Nature</strong> - Flower petals, seed heads, and
+                    spiral shells follow Fibonacci patterns.
+                  </li>
+                  <li>
+                    <strong>Computer Science</strong> - Fibonacci search, heap
+                    data structures, and recursion examples.
+                  </li>
+                  <li>
+                    <strong>Finance</strong> - Fibonacci retracement is used in
+                    technical analysis.
+                  </li>
+                  <li>
+                    <strong>Algorithms</strong> - Classic example for teaching
+                    recursion and dynamic programming.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Alejandro Ayala</h5>
+            <p>Sr. Software Developer Python</p>
+            <p>
+              Building robust, scalable software solutions with modern
+              technologies.
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Quick Links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="crud.html">CRUD</a></li>
+              <li><a href="database.html">Database</a></li>
+              <li><a href="logic.html">Logic</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="team.html">Team</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Contact</h5>
+            <p><i class="bi bi-envelope me-2"></i>alejandro.ayala0@gmail.com</p>
+            <p><i class="bi bi-telephone me-2"></i>+57 (301) 685-9278</p>
+            <p><i class="bi bi-geo-alt me-2"></i>Medellin, Colombia</p>
+            <div class="social-links">
+              <a
+                href="https://linkedin.com/in/alejandro-ayala-usuga-26807b219"
+                target="_blank"
+                class="social-link"
+                aria-label="LinkedIn profile"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="social-link"
+                aria-label="GitHub profile"
+                ><i class="bi bi-github"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="social-link"
+                aria-label="Portfolio website"
+                ><i class="bi bi-briefcase"></i
+              ></a>
+              <a
+                href="mailto:alejandro.ayala0@gmail.com"
+                class="social-link"
+                aria-label="Send email"
+                ><i class="bi bi-envelope-fill"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Alejandro Ayala. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
