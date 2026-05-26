@@ -107,10 +107,10 @@ html {
     width: 200%;
     height: 200%;
     background:
-        radial-gradient(circle at 25% 40%, rgba(0, 212, 255, 0.08) 0%, transparent 45%),
-        radial-gradient(circle at 75% 60%, rgba(233, 69, 96, 0.06) 0%, transparent 45%),
-        radial-gradient(circle at 50% 80%, rgba(0, 212, 255, 0.04) 0%, transparent 50%);
-    animation: heroGlow 10s ease-in-out infinite;
+        radial-gradient(circle at 25% 40%, rgba(0, 212, 255, 0.15) 0%, transparent 45%),
+        radial-gradient(circle at 75% 60%, rgba(233, 69, 96, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 50% 80%, rgba(0, 212, 255, 0.08) 0%, transparent 50%);
+    animation: heroGlow 8s ease-in-out infinite;
 }
 
 .hero-section::after {
@@ -128,8 +128,8 @@ html {
 }
 
 @keyframes heroGlow {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.05); }
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
 }
 
 .hero-content {
@@ -143,6 +143,12 @@ html {
     font-weight: 700;
     margin-bottom: 16px;
     text-shadow: 0 0 40px rgba(0, 212, 255, 0.15);
+    animation: textGlow 4s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% { text-shadow: 0 0 20px rgba(0, 212, 255, 0.1); }
+    50% { text-shadow: 0 0 60px rgba(0, 212, 255, 0.4), 0 0 120px rgba(0, 212, 255, 0.15); }
 }
 
 .hero-content .lead {
@@ -150,6 +156,12 @@ html {
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 24px;
+    animation: leadPulse 4s ease-in-out infinite;
+}
+
+@keyframes leadPulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
 }
 
 .hero-content p:not(.lead) {
