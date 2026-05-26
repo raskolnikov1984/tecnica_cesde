@@ -155,17 +155,19 @@ F(n) = F(n-<span class="number">1</span>) + F(n-<span class="number">2</span>)  
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">
-                  <i class="bi bi-code-slash text-accent me-2"></i>JavaScript
+                  <i class="bi bi-code-slash text-accent me-2"></i>Java
                   Implementation
                 </h5>
                 <div class="code-block">
-                  <pre><span class="keyword">function</span> <span class="function">fibonacci</span>(n) {
-    <span class="keyword">let</span> sequence = [];
-    <span class="keyword">let</span> a = <span class="number">0</span>, b = <span class="number">1</span>;
+                  <pre><span class="keyword">public static int</span>[] <span class="function">fibonacci</span>(<span class="type">int</span> n) {
+    <span class="type">int</span>[] sequence = <span class="keyword">new int</span>[n + <span class="number">1</span>];
+    <span class="type">int</span> a = <span class="number">0</span>, b = <span class="number">1</span>;
 
-    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i <= n; i++) {
-        sequence.<span class="function">push</span>(a);
-        [a, b] = [b, a + b];
+    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i <= n; i++) {
+        sequence[i] = a;
+        <span class="type">int</span> temp = a + b;
+        a = b;
+        b = temp;
     }
 
     <span class="keyword">return</span> sequence;
