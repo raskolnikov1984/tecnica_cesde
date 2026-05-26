@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "cause";
+  src: url("fonts/Cause-VariableFont_wght.ttf");
+}
+
+html {
+  font-family: "cause";
+}
+
+body {
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+p {
+  text-align: justify;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+}
+
+.botones {
+  background-color: aliceblue;
+  padding: 30px 0px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.btn {
+  background-color: blueviolet;
+  color: white;
+  padding: 10px 20px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: blue;
+  color: whitesmoke;
+  transform: scale(1.2);
+  font-size: 20px;
+}
+
+.btn:active {
+  background-color: red;
+}
+
+#p1:target {
+  background-color: rgba(108, 108, 218, 0.247);
+}
+
+#p2:target {
+  background-color: rgba(108, 108, 218, 0.247);
+}
+
+#p3:target {
+  background-color: rgba(108, 108, 218, 0.247);
+}
+
+.texto1 {
+  margin: 10px auto;
+  padding: 7px;
+  text-align: center;
+  border: 3px dashed red;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+}
+
+.texto1 p {
+  max-width: max-content;
+  padding: 7px;
+  text-align: center;
+}
+
+.texto1 p:first-child {
+  background-color: rgba(20, 20, 66, 0.247);
+}
+
+.texto1 p:nth-child(2) {
+  background-color: rgba(30, 135, 51, 0.247);
+}
+
+.tabla1 {
+  border-collapse: collapse;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.tabla1 thead {
+  background-color: rgba(108, 108, 218, 0.247);
+  font-weight: bold;
+}
+
+.tabla1 th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.tabla1 tbody tr:nth-child(even) {
+  background-color: rgba(27, 27, 98, 0.247);
+}
+
+.tabla1 tbody td:nth-child(odd) {
+  background-color: rgba(27, 27, 98, 0.247);
+}
+
+.lista {
+  width: 50%;
+  margin: 20px auto;
+  padding: 40px;
+  border: 3px dashed red;
+  border-radius: 25px;
+  background-color: rgba(108, 108, 218, 0.247);
+  list-style: none;
+  align-items: center;
+}
+
+.lista li::before {
+  content: "✓";
+  color: green;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.lista li::after {
+  content: "................. seguro que quieres eliminar esto?";
+  color: green;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.cuadro {
+  background-color: coral;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+  margin: 20px auto 60px auto;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px black;
+  position: relative;
+}
+
+.cuadro p {
+  text-align: center;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.cuadro::before {
+  content: "¡Atención!";
+  background-size: contain;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 38px;
+  right: 99%;
+  color: red;
+}
