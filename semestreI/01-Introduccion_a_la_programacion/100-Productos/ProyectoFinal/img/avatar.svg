@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a23"/>
+      <stop offset="100%" stop-color="#1a1a3e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#e94560"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" stroke="url(#accentGrad)" stroke-width="4"/>
+
+  <circle cx="100" cy="80" r="35" fill="#e0e0e0"/>
+  <circle cx="100" cy="80" r="32" fill="#16213e"/>
+
+  <circle cx="88" cy="75" r="4" fill="#e0e0e0"/>
+  <circle cx="112" cy="75" r="4" fill="#e0e0e0"/>
+
+  <path d="M 85 90 Q 100 100 115 90" stroke="#e0e0e0" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <ellipse cx="100" cy="155" rx="55" ry="35" fill="#16213e"/>
+  <ellipse cx="100" cy="155" rx="50" ry="30" fill="#1a1a3e"/>
+  <circle cx="100" cy="155" r="25" fill="#e0e0e0" opacity="0.1"/>
+
+  <text x="100" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a0a0b0">Alejandro Ayala</text>
+</svg>
