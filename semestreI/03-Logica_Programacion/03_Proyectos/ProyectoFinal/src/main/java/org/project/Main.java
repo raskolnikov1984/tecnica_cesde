@@ -1,5 +1,6 @@
 package org.project;
 
+import org.project.logic.ConsolaCredencialesProveedor;
 import org.project.logic.Usuario;
 import org.project.logic.Login;
 
@@ -14,15 +15,13 @@ public class Main {
         System.out.println("=====================");
 
         Scanner scanner = new Scanner(System.in);
+        ConsolaCredencialesProveedor credenciales = new ConsolaCredencialesProveedor(scanner);
         Usuario cajero = new Usuario("cajero1", "Supersena");
         Login login = new Login();
 
         try {
-            System.out.print("Ingrese su usuario: ");
-            String usuarioIngresado = scanner.next();
-
-            System.out.print("Ingrese su contraseña: ");
-            String contrasenaIngresada = scanner.next();
+            String usuarioIngresado = credenciales.obtenerUsuario();
+            String contrasenaIngresada = credenciales.obtenerContrasena();
 
             boolean exito = login.autenticar(cajero, usuarioIngresado, contrasenaIngresada);
 
