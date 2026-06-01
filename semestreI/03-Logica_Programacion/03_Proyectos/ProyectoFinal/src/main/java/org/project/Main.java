@@ -12,47 +12,62 @@ import java.util.Scanner;
 public class Main {
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
-    static void main() {
-        System.out.println("=====================");
-        System.out.println("    Proyecto Final   ");
-        System.out.println("=====================");
+    private final Scanner scanner;
+    private final ConsolaCredencialesProveedor credenciales;
+    private final Menu menu;
+    private final Login login;
+    private final Usuario cajero;
 
-        Scanner scanner = new Scanner(System.in);
-        ConsolaCredencialesProveedor credenciales = new ConsolaCredencialesProveedor(scanner);
-        Menu menu = new Menu();
+    public Main() {
+        this.scanner = new Scanner(System.in);
+        this.credenciales = new ConsolaCredencialesProveedor(scanner);
+        this.menu = new Menu();
+        this.login = new Login();
+        this.cajero = new Usuario("cajero1", "Supersena");
+    }
 
-        Usuario cajero = new Usuario("cajero1", "Supersena");
-        Login login = new Login();
+    public static void main(String[] args) {
+        Main app = new Main();
+        app.iniciar();
+    }
 
-        boolean autenticado = false;
-        while (!autenticado) {
+    public void iniciar() {
+        imprimirTitulo();
+
+        if (ejecutarLogin()) {
+            ejecutarCicloMenu();
+        }
+
+        scanner.close();
+    }
+
+    private boolean ejecutarLogin() {
+        while (true) {
             try {
                 String usuarioIngresado = credenciales.obtenerUsuario();
                 String contrasenaIngresada = credenciales.obtenerContrasena();
 
-                autenticado = login.autenticar(cajero, usuarioIngresado, contrasenaIngresada);
-
-                if (autenticado) {
+                if (login.autenticar(cajero, usuarioIngresado, contrasenaIngresada)) {
                     System.out.println("¡Inicio de sesión exitoso!\n");
+                    return true;
                 } else {
-                    System.out.println("❌ Error: Credenciales inválidas. Intente de nuevo.");
+                    System.out.println("❌ Error: Credenciales inválidas. Intente de nuevo.\n");
                 }
             } catch (Exception e) {
                 logger.log(Level.SEVERE, "Error crítico en el sistema de login", e);
-                return;
+                return false;
             }
         }
+    }
 
+    private void ejecutarCicloMenu() {
         boolean corriendo = true;
         while (corriendo) {
             int opcion = menu.imprimirMenu(scanner);
 
             switch (opcion) {
                 case 1:
-                    System.out.println("\n--- Películas Disponibles ---");
-                    System.out.println("- Terminator: La rebelión de las máquinas");
-                    System.out.println("- ¡Para o mi mamá dispara!");
-                    System.out.println("- Mi pobre angelito");
+                    mostrarPeliculas();
                     break;
                 case 2:
                     System.out.println("\n🎟️ ¡Boleto comprado con éxito!");
@@ -62,11 +77,22 @@ public class Main {
                     corriendo = false;
                     break;
                 default:
-                    System.out.println("Error inesperado.");
+                    System.out.println("❌ Opción no válida. Intente de nuevo.");
                     break;
             }
         }
+    }
 
-        scanner.close();
+    private void mostrarPeliculas() {
+        System.out.println("\n--- Películas Disponibles ---");
+        System.out.println("- Terminator: La rebelión de las máquinas");
+        System.out.println("- ¡Para o mi mamá dispara!");
+        System.out.println("- Mi pobre angelito");
+    }
+
+    private static void imprimirTitulo() {
+        System.out.println("=====================");
+        System.out.println("    Proyecto Final   ");
+        System.out.println("=====================");
     }
 }
