@@ -4,15 +4,19 @@ import org.project.logic.ConsolaCredencialesProveedor;
 import org.project.logic.Usuario;
 import org.project.logic.Login;
 
+import java.util.logging.Logger;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
+
     static void main() {
-        System.out.println("=====================");
-        System.out.println("    Proyecto Final   ");
-        System.out.println("=====================");
+        logger.info("=====================");
+        logger.info("    Proyecto Final   ");
+        logger.info("=====================");
 
         Scanner scanner = new Scanner(System.in);
         ConsolaCredencialesProveedor credenciales = new ConsolaCredencialesProveedor(scanner);
@@ -26,9 +30,9 @@ public class Main {
             boolean exito = login.autenticar(cajero, usuarioIngresado, contrasenaIngresada);
 
             if (exito) {
-                System.out.println("¡Inicio de sesión exitoso!");
+                logger.info("¡Inicio de sesión exitoso!");
             } else {
-                System.out.println("Error: Credenciales inválidas.");
+                logger.info("Error: Credenciales inválidas.");
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
